@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secretos y configuracion local: NUNCA se versionan
+.env
+.env.*
+!.env.example
+
+# Otros
+*.log
