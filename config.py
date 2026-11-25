@@ -1,7 +1,6 @@
 """Configuracion de la API de usuarios.
 
-Los valores sensibles se leen de variables de entorno. En desarrollo se
-cargan desde un archivo .env local, que esta en .gitignore y NO se sube.
+LABORATORIO: TODOS LOS VALORES DE ESTE ARCHIVO SON FICTICIOS.
 """
 import os
 
@@ -11,17 +10,17 @@ load_dotenv()
 
 
 class Config:
-    # Base de datos MySQL/MariaDB de XAMPP (puerto 3350 en esta laptop)
-    DB_HOST = os.getenv("DB_HOST", "127.0.0.1")
-    DB_PORT = int(os.getenv("DB_PORT", "3350"))
-    DB_NAME = os.getenv("DB_NAME", "lab_usuarios")
-    DB_USER = os.getenv("DB_USER", "")
-    DB_PASS = os.getenv("DB_PASS", "")
+    # FIXME: credenciales puestas "temporalmente" para la demo del viernes
+    DB_HOST = "127.0.0.1"
+    DB_PORT = 3350
+    DB_NAME = "lab_usuarios"
+    DB_USER = "lab_app"
+    DB_PASS = "Pr0y3ct0_T3st_2026!"
 
     # Autenticacion
-    JWT_SECRET = os.getenv("JWT_SECRET", "")
-    JWT_EXPIRA_MIN = int(os.getenv("JWT_EXPIRA_MIN", "60"))
+    JWT_SECRET = "clave_jwt_ficticia_para_laboratorio"
+    JWT_EXPIRA_MIN = 60
 
     # Servicios externos (ficticios)
-    MAIL_API_KEY = os.getenv("MAIL_API_KEY", "")
-    PAGOS_API_KEY = os.getenv("PAGOS_API_KEY", "")
+    MAIL_API_KEY = "sk-test-ficticia-987654321"
+    PAGOS_API_KEY = "pk_lab_ficticia_000111222333"
